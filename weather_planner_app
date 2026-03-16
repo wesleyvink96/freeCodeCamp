@@ -1,0 +1,30 @@
+distance_mi = 5
+is_raining = False
+has_bike = True
+has_car = False
+has_ride_share_app = True
+
+# Stap 1: Check of afstand 'falsy' is (zoals 0)
+if not distance_mi:
+    print(False)
+
+# Stap 2: Afstand <= 1 mijl
+elif distance_mi <= 1:
+    if not is_raining:
+        print(True)
+    else:
+        print(False)
+
+# Stap 3: Tussen 1 en 6 mijl (1 < dist <= 6)
+elif distance_mi <= 6:
+    if has_bike and not is_raining:
+        print(True)
+    else:
+        print(False)
+
+# Stap 4: Groter dan 6 mijl
+else:
+    if has_car or has_ride_share_app:
+        print(True)
+    else:
+        print(False)
